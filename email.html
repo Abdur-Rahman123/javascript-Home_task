@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+		<input id="name" type="text" name="" value="" onblur="f1()" /><br> <p id="msg"></p>
+		<input type="button" name="btn" value="Click" onclick="f1()">
+	</form>
+	<script>
+	"use strict"
+	function f1()
+{
+	var name = document.getElementById('name').value;
+	if(name=="")
+	{
+		document.getElementById('msg').innerHTML = "null submission";
+	}
+	else if(!name.includes("@"))
+	{
+		document.getElementById('msg').innerHTML = "use valid email address";
+	}
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<input id="name" type="text" name="" value="" onblur="f1()" /><br> <p id="msg"></p>
+		<input type="button" name="btn" value="Click" onclick="f1()">
+	</form>
+<script>
+	"use strict"
+
+function f1()
+{
+	var name = document.getElementById('name').value;
+	if(name=="")
+	{
+		document.getElementById('msg').innerHTML = "null submission";
+	}
+
+	else if(name.length<2)
+	{
+		document.getElementById('msg').innerHTML = "length can't be less than 2";
+	}
+
+	else if(name[0]>=97 || name[0]<=122)
+	{
+		document.getElementById('msg').innerHTML = "can't start wit number";
+	}
+	for(var i=0; i<name.length; i++)
+	{
+		if(name[i]=='.' ||name[i]=='-')
+		{
+			document.getElementById('msg').innerHTML = "name can't contain . or -";
+		}
+	}
+	}
+
+</script>
+</body>
+</html>
